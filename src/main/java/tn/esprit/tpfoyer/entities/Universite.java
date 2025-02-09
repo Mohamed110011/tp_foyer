@@ -5,6 +5,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 
+
 @Entity
 @AllArgsConstructor
 @Getter
@@ -13,10 +14,10 @@ import lombok.experimental.FieldDefaults;
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
 
-public class Bloc {
+public class Universite {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long idBloc;
-    String nomBloc ;
-    long capaciteBloc ;
+    long idUniversite ;
+    String nomUniversite ;
+    String adresse ;
 }

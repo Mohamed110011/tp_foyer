@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.sql.Date;
+
 
 @Entity
 @AllArgsConstructor
@@ -13,10 +15,13 @@ import lombok.experimental.FieldDefaults;
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
 
-public class Bloc {
+public class Etudiant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long idBloc;
-    String nomBloc ;
-    long capaciteBloc ;
+    long idEtudiant;
+    String nomEt;
+    String prenomEt;
+    long cin;
+    String ecole;
+    Date dateNaissance;
 }

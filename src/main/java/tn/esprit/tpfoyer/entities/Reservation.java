@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.sql.Date;
+
 
 @Entity
 @AllArgsConstructor
@@ -13,10 +15,10 @@ import lombok.experimental.FieldDefaults;
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
 
-public class Bloc {
+public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long idBloc;
-    String nomBloc ;
-    long capaciteBloc ;
+    String idReservation;
+    Date anneelUniversitaire;
+    boolean estValide;
 }
