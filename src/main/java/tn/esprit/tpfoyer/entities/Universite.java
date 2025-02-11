@@ -12,9 +12,13 @@ import lombok.experimental.FieldDefaults;
 @Setter
 @NoArgsConstructor
 @ToString
+
 @FieldDefaults(level = AccessLevel.PRIVATE)
 
 public class Universite {
+    @OneToOne
+    Foyer foyer;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long idUniversite ;

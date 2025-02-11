@@ -5,7 +5,9 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.sql.Date;
-
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @AllArgsConstructor
@@ -14,14 +16,20 @@ import java.sql.Date;
 @NoArgsConstructor
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
-
 public class Etudiant {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long idEtudiant;
+
     String nomEt;
     String prenomEt;
     long cin;
     String ecole;
     Date dateNaissance;
+
+    // Many-to-Many relationship with Reservation
+    @ManyToMany(mappedBy = "etudiants")
+
+    Set<Reservation> reservations= new HashSet<Reservation>();
 }

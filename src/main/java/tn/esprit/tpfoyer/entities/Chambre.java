@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.util.List;
+
 
 @Entity
 @AllArgsConstructor
@@ -14,6 +16,13 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 
 public class Chambre {
+
+    @ManyToOne
+    Bloc bloc;
+
+    @OneToMany
+    List<Reservation> reservations;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
      long idChambre;
