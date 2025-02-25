@@ -29,4 +29,43 @@ public class Foyer {
     String nomFoyer;
     long capaciteFoyer;
 
+    public Universite getUniversite() {
+        return universite;
+    }
+
+    public void setUniversite(Universite universite) {
+        this.universite = universite;
+    }
+
+    public Set<Bloc> getBloclis() {
+        return bloclis;
+    }
+
+    public void setBloclis(Set<Bloc> bloclis) {
+        this.bloclis = bloclis;
+    }
+
+    public long getIdFoyer() {
+        return idFoyer;
+    }
+
+    public void setIdFoyer(long idFoyer) {
+        this.idFoyer = idFoyer;
+    }
+
+    public String getNomFoyer() {
+        return nomFoyer;
+    }
+
+    public void setNomFoyer(String nomFoyer) {
+        this.nomFoyer = nomFoyer;
+    }
+
+    public long getCapaciteFoyer() {
+        return capaciteFoyer;
+    }
+
+    public void setCapaciteFoyer(long capaciteFoyer) {
+        this.capaciteFoyer = capaciteFoyer;
+    }
 }
